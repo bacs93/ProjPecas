@@ -20,8 +20,22 @@ public class CadastroDB {
 		
 		try {
 			
-			PreparedStatement stmt = this.connection.prepareStatement("INSERT INTO cadastro ()
-					
+			PreparedStatement stmt = this.connection.prepareStatement("INSERT INTO cadastro (id, nome, peso, tipo, data_de_cadastro, valor) values (?, ?, ?, ?, ?, ?)");
+			stmt.setString(1, cadastro.getNome());
+			stmt.setDouble(2, cadastro.getPeso());
+			stmt.setString(3, cadastro.getTipo());
+			stmt.setInt(4, cadastro.getData_de_cadastro());
+			stmt.setFloat(5, cadastro.getValor());
+			
+			stmt.execute();
+			status = true;
+			
+		}catch (SQLException e) {
+			System.err.println(e.toString());
+			status = false;
+		} finally{
+			connection.close();
 		}
+		return status;
 	}
 }

@@ -8,6 +8,7 @@ public class Cadastro {
 	private String tipo;
 	private int data_de_cadastro;
 	private float valor;
+	
 	public int getId() {
 		return id;
 	}
