@@ -10,7 +10,7 @@
 
 <div align="center">
 <h1>Cadastro</h1>
-<form action="cadtrar.jsp" method="post">
+<form action="cadastrar.jsp" method="post">
 <table>
 	<tr>
 		<td>Id:</td>
@@ -37,7 +37,7 @@
 		<td><input name="valor" id="valor" /></td>
 		</tr>	
 	</table>
-
+		<input type="submit" value="Salvar"/>
 	</form>
 </div>
 
